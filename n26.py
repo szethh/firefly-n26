@@ -15,7 +15,7 @@ class N26:
         self.default_account_name = config['default_account_name']
         self.watchdir = Path(config['watchdir'])
         self.archive = Path(config['archive'])
-        self.data_f = Path(config['data'])
+        self.data_f = Path(config['transactions_file'])
         try:
             self.data = pd.read_csv(self.data_f)
         except:  # FileNotFound, EmptyDataError, malformed data???
